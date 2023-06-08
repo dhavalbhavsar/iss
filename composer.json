@@ -1,0 +1,19 @@
+{
+  "require": {
+    "psr/container": "^1.1",
+    "psr/simple-cache": "^1.0"
+  },
+  "autoload": {
+    "psr-4": {
+      "ImageProcessing\\": "src/"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "ImageProcessing\\Tests\\": "tests/"
+    }
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.2"
+  }
+}
