@@ -12,9 +12,15 @@ class ContainStrategy implements ImageStrategyInterface
         if ($aspectRatioA > $aspectRatioB) {
             $width = $imageA['height'] * $aspectRatioB;
             $height = $imageA['height'];
+
         } else {
             $width = $imageA['width'];
             $height = $imageA['width'] / $aspectRatioB;
+        }
+
+        if($width > $imageB['width'] && $height > $imageB['height']) {
+            $width = $imageB['width'];
+            $height = $imageB['height'];
         }
 
         return ['width' => $width, 'height' => $height];
