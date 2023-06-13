@@ -19,8 +19,7 @@ class ContainStrategy implements ImageStrategyInterface
         }
 
         if($width > $imageB['width'] && $height > $imageB['height']) {
-            $width = $imageB['width'];
-            $height = $imageB['height'];
+            return $imageB;
         }
 
         return ['width' => $width, 'height' => $height];
